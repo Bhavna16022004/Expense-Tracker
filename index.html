@@ -503,7 +503,7 @@ canvas {
             <canvas id="expenseChart" width="400" height="400"></canvas>
         </div>
     </div>
-    <div class="total">Total: $<span id="totalAmount">0.00</span></div>
+    <div class="total">Total: ₹<span id="totalAmount">0.00</span></div>
 </div>
   </div>
 
@@ -577,7 +577,7 @@ canvas {
           row.innerHTML = `
               <td>${expense.date}</td>
               <td>${expense.description}</td>
-              <td>$${expense.amount.toFixed(2)}</td>
+              <td>₹${expense.amount.toFixed(2)}</td>
               <td>${expense.category}</td>
               <td>
                   <button onclick="editExpense(${index})">Edit</button>
@@ -664,7 +664,7 @@ canvas {
                   tooltip: {
                       callbacks: {
                           label: function(tooltipItem) {
-                              return `${categories[tooltipItem.dataIndex]}: $${data[tooltipItem.dataIndex].toFixed(2)}`;
+                              return `${categories[tooltipItem.dataIndex]}: ₹${data[tooltipItem.dataIndex].toFixed(2)}`;
                           }
                       }
                   }
